@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project-Nevil </title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <script>
+        function cal(){
+            let amount=document.getElementById("amount").value
+            let time=document.getElementById("time").value
+            let interest=document.getElementById("interest").value
+            let si=(amount*time*interest/100);
+            let k=si+Number(amount);
+            document.getElementById("total").innerHTML="Total amount: "+k;
+        }
+    </script>
+    <table style="width: 100%; font-size: larger; font-family: Arial, Helvetica, sans-serif;" border="1">
+        <tr>
+            <td class="navbar" ><a href="../main.html" >Home</a></td>
+            <td class="selected navbar" ><a href="../project.html">Projects</a></td>
+            <td class="navbar" ><a href="../interests.html" >Interests</a></td>
+            <td class="navbar" ><a href="../hobbies.html" >Hobbies</a></td>
+            <td class="navbar" ><a href="../contact.html" >Contact</a></td>
+            <td class="navbar" ><a href="../login.html" >Login</a></td>
+            <td class="navbar" ><a href="../register.html" >Register</a></td>
+        </tr>
+    </table>
+    <div class="container">
+        <h2>Calculate total amount</h2>
+        <label>Enter principle amount: </label><input type="number" id="amount"  value=1 oninput="cal()" required>
+        <label>Enter time in year: </label><input type="number" id="time"  value=1 oninput="cal()" required>
+        <label>Enter rate of interest: </label><input type="number" id="interest"  value=1 oninput="cal()" required><br><br>
+        <div id="total"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+<footer>
+    <a href="mailto:someone@example.com"><button>Any recommendations ?? Click to email</button></a><br><br>
+    <address>Coded and handeled by: Nevil </address>
+    <pre>Copyright 2005-2025 by <b>Nevil</b>. All Rights Reserved.</pre></footer>
+</html>
