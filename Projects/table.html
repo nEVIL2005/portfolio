@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project-Nevil </title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <script>
+        function table(num){
+            num = num.replace(/^0+/, "") || "0"
+            if(num=="")num=0;
+            let k = "<table>";
+            for (let i = 1; i <= 10; i++) {
+                k += `<tr><td>${num}</td><td>x</td><td>${i}</td><td> = </td><td>${num * i}</td></tr>`;
+            }
+            k += "</table>";
+            document.getElementById("table").innerHTML=k;
+        }
+        function bgcolor(){
+            let col=document.getElementById("favbgcolor").value;
+            document.getElementById("table").style.backgroundColor=col;
+        }
+        function color(){
+            let col=document.getElementById("favcolor").value;
+            document.getElementById("table").style.color=col;
+        }
+        
+    </script>
+    <table style="width: 100%; font-size: larger; font-family: Arial, Helvetica, sans-serif;" border="1">
+        <tr>
+            <td class="navbar" ><a href="../main.html" >Home</a></td>
+            <td class="selected navbar" ><a href="../project.html">Projects</a></td>
+            <td class="navbar" ><a href="../interests.html" >Interests</a></td>
+            <td class="navbar" ><a href="../hobbies.html" >Hobbies</a></td>
+            <td class="navbar" ><a href="../contact.html" >Contact</a></td>
+            <td class="navbar" ><a href="../login.html" >Login</a></td>
+            <td class="navbar" ><a href="../register.html" >Register</a></td>
+        </tr>
+    </table>
+    <div class="container">
+        <h2>Calculate table</h2>
+        <label>Enter number: </label><input type="number" name="num"  value=0 oninput="table(document.getElementsByName('num')[0].value)" required>
+        <label for="favcolor">Choose a color:</label><input type="color" id="favcolor" name="favcolor" oninput="color()" value="#000000">
+        <label for="favcolor">Choose a bgcolor:</label><input type="color" id="favbgcolor" name="favcolor" oninput="bgcolor()" value="#ffffff">
+        
+        <div id="table"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+<footer>
+    <a href="mailto:someone@example.com"><button>Any recommendations ?? Click to email</button></a><br><br>
+    <address>Coded and handeled by: Nevil </address>
+    <pre>Copyright 2005-2025 by <b>Nevil</b>. All Rights Reserved.</pre></footer>
+</html>
